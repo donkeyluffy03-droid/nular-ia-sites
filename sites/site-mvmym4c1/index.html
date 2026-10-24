@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NULAR IA - Explorador de Inovação Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nular: {
+                            50: '#f0fdf4',
+                            500: '#10b981',
+                            600: '#059669',
+                            900: '#064e3b',
+                            dark: '#030712'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-nular-dark text-gray-100 font-sans antialiased selection:bg-nular-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-nular-600 to-emerald-400 flex items-center justify-center shadow-lg shadow-nular-500/30">
+                    <i class="fa-solid fa-cube text-white text-lg"></i>
+                </div>
+                <span class="text-xl font-bold tracking-wider bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">NULAR<span class="text-nular-500">.IA</span></span>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                <a href="#recursos" class="hover:text-nular-500 transition">Recursos</a>
+                <a href="#projetos" class="hover:text-nular-500 transition">Galeria</a>
+                <a href="#interativo" class="hover:text-nular-500 transition">Gerador</a>
+                <a href="#contato" class="hover:text-nular-500 transition">Contato</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="document.getElementById('interativo').scrollIntoView({behavior: 'smooth'})" class="bg-nular-600 hover:bg-nular-500 text-white px-5 py-2.5 rounded-xl font-medium transition shadow-lg shadow-nular-600/20 text-sm">
+                    Criar Projeto
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Glow -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-nular-500/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-nular-500/10 border border-nular-500/20 text-nular-400 text-xs font-semibold uppercase tracking-wider">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Desenvolvimento Web Inteligente</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                    Transformando ideias em <span class="bg-gradient-to-r from-nular-500 to-emerald-300 bg-clip-text text-transparent">experiências digitais</span>.
+                </h1>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0">
+                    A NULAR IA cria e edita sites e aplicações web de alta performance com design moderno, responsivo e focado em conversão.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                    <button onclick="document.getElementById('interativo').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto bg-gradient-to-r from-nular-600 to-emerald-500 text-white px-8 py-4 rounded-xl font-semibold shadow-xl shadow-nular-600/30 hover:opacity-95 transition">
+                        Explorar Demonstração
+                    </button>
+                    <a href="#recursos" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold glass-panel hover:bg-gray-800 transition text-center">
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="relative w-full aspect-square max-w-md mx-auto animate-float">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-nular-600 to-emerald-400 rounded-3xl opacity-30 blur-2xl"></div>
+                    <div class="relative glass-panel rounded-3xl p-6 h-full flex flex-col justify-between border border-gray-700/50 shadow-2xl">
+                        <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                            </div>
+                            <span class="text-xs text-gray-500 font-mono">nular-app.tsx</span>
+                        </div>
+                        <div class="space-y-3 font-mono text-xs text-gray-300 my-auto">
+                            <p class="text-nular-400">// Inicializando NULAR IA...</p>
+                            <p><span class="text-purple-400">const</span> site = <span class="text-yellow-300">new</span> WebApp({</p>
+                            <p class="pl-4">design: <span class="text-green-400">'Moderno & Responsivo'</span>,</p>
+                            <p class="pl-4">status: <span class="text-green-400">'Pronto para Produção'</span></p>
+                            <p>});</p>
+                            <p class="text-blue-400">site.render();</p>
+                        </div>
+                        <div class="bg-gray-900/80 p-4 rounded-xl border border-gray-800 flex items-center justify-between">
+                            <span class="text-xs text-gray-400">Status do Sistema</span>
+                            <span class="flex items-center text-xs text-emerald-400 font-semibold">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping mr-2"></span> Online
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="recursos" class="py-24 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Por que escolher a NULAR IA?</h2>
+                <p class="text-gray-400">Combinamos inteligência artificial e design de ponta para entregar resultados excepcionais.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl hover:border-nular-500/50 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-nular-500/10 text-nular-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Velocidade Extrema</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Estruturas limpas e otimizadas que carregam instantaneamente em qualquer dispositivo.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-nular-500/50 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-nular-500/10 text-nular-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Design Exclusivo</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Interfaces modernas e atraentes que transmitem profissionalismo e valorizam sua marca.</p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl hover:border-nular-500/50 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-nular-500/10 text-nular-400 flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">100% Responsivo</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Perfeitamente adaptado para smartphones, tablets, notebooks e grandes telas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Interativa / Gerador Simulador -->
+    <section id="interativo" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-gray-800 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-nular-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold mb-3">Simulador de Projeto Web</h2>
+                    <p class="text-gray-400 text-sm">Insira o seu objetivo para ver a NULAR IA gerar o conceito instantaneamente.</p>
+                </div>
+
+                <form id="simulador-form" onsubmit="gerarProjeto(event)" class="space-y-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="text" id="projeto-input" required placeholder="Ex: Landing Page para Aplicativo de Fitness..." class="flex-1 bg-gray-900/90 border border-gray-700 rounded-xl px-5 py-4 text-gray-100 placeholder-gray-500 focus:outline-none focus:border-nular-500 transition text-sm">
+                        <button type="submit" class="bg-nular-600 hover:bg-nular-500 text-white px-8 py-4 rounded-xl font-medium transition shadow-lg shadow-nular-600/30 text-sm whitespace-nowrap">
+                            Gerar Conceito
+                        </button>
+                    </div>
+                </form>
+
+                <div id="resultado-simulacao" class="mt-8 hidden p-6 rounded-2xl bg-gray-900/80 border border-gray-800 animate-fade-in">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-semibold text-nular-400 uppercase tracking-wider" id="res-categoria">Projeto Web</span>
+                        <span class="text-xs text-gray-500"><i class="fa-solid fa-circle text-emerald-500 text-[8px] mr-1"></i> Gerado com sucesso</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2" id="res-titulo">Título do Projeto</h3>
+                    <p class="text-gray-400 text-sm mb-4" id="res-descricao">Descrição detalhada do projeto gerado pela IA com foco em alta performance.</p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-gray-800">
+                        <span class="px-3 py-1 rounded-lg bg-gray-800 text-gray-300 text-xs">Tailwind CSS</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-800 text-gray-300 text-xs">Design Responsivo</span>
+                        <span class="px-3 py-1 rounded-lg bg-gray-800 text-gray-300 text-xs">Alta Conversão</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-12 bg-gray-950">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-nular-600 to-emerald-400 flex items-center justify-center">
+                    <i class="fa-solid fa-cube text-white text-sm"></i>
+                </div>
+                <span class="text-lg font-bold tracking-wider text-white">NULAR<span class="text-nular-500">.IA</span></span>
+            </div>
+            
+            <p class="text-gray-500 text-sm text-center">
+                &copy; 2026 NULAR IA. Todos os direitos reservados. Especialistas em criação web.
+            </p>
+
+            <div class="flex space-x-4 text-gray-400">
+                <a href="#" class="hover:text-nular-500 transition"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-nular-500 transition"><i class="fa-brands fa-twitter text-lg"></i></a>
+                <a href="#" class="hover:text-nular-500 transition"><i class="fa-brands fa-discord text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Simples para Interatividade -->
+    <script>
+        function gerarProjeto(event) {
+            event.preventDefault();
+            const input = document.getElementById('projeto-input').value;
+            const resultadoBox = document.getElementById('resultado-simulacao');
+            const resTitulo = document.getElementById('res-titulo');
+            const resDescricao = document.getElementById('res-descricao');
+            const resCategoria = document.getElementById('res-categoria');
+
+            if (!input.trim()) return;
+
+            // Simula resposta da IA
+            resCategoria.textContent = "Conceito IA Gerado";
+            resTitulo.textContent = input;
+            resDescricao.textContent = `A NULAR IA estruturou um layout otimizado para "${input}", integrando seções de conversão, tipografia refinada e paleta de cores personalizada.`;
+
+            resultadoBox.classList.remove('hidden');
+        }
+    </script>
+
+<script>
+/* NULAR_UNCONFIGURED_LINKS_HANDLER_V5 */
+(function () {
+  function platformDestination(raw) {
+    if (!raw) return false;
+    try {
+      const u = new URL(raw, document.baseURI);
+      const host = (u.hostname || '').toLowerCase();
+      return /(^|\.)(nularia|lunaria|nular|lunar)(\.|$)/i.test(host) ||
+        /(^|\.)nular-ia\./i.test(host);
+    } catch (_) {
+      return /(?:nularia|lunaria|nular|lunar\s*ia)/i.test(raw);
+    }
+  }
+
+  function meaningfulAnchor(el) {
+    const href = (el.getAttribute('href') || '').trim();
+    if (!href || href === '#' || /^javascript:\s*(?:void\s*\(?\s*0?\s*\)?\s*;?)?$/i.test(href)) return false;
+    if (platformDestination(href)) return false;
+    if (href.startsWith('#')) {
+      try { return !!document.getElementById(decodeURIComponent(href.slice(1))); }
+      catch (_) { return false; }
+    }
+    return true;
+  }
+
+  function meaningfulButton(el) {
+    const tag = (el.tagName || '').toLowerCase();
+    if (tag === 'a') return meaningfulAnchor(el);
+    if (el.hasAttribute('data-unconfigured')) return false;
+
+    const destination = (el.getAttribute('data-href') || el.getAttribute('data-url') ||
+      el.getAttribute('formaction') || '').trim();
+    if (destination) return destination !== '#' && !platformDestination(destination);
+
+    const inline = (el.getAttribute('onclick') || '').trim();
+    if (inline) {
+      if (/(?:window\.)?location(?:\.href)?\s*=|location\.(?:assign|replace)\s*\(/i.test(inline) &&
+          platformDestination(inline)) return false;
+      if (/^(?:return\s+false\s*;?|void\s*\(?\s*0?\s*\)?\s*;?)$/i.test(inline)) return false;
+      if (/^(?:alert|console\.(?:log|warn)|preventDefault)\s*\(/i.test(inline)) return false;
+      const calls = [...inline.matchAll(/(?:^|[;{}]\s*)(?:return\s+)?([A-Za-z_$][\w$]*)\s*\(/g)]
+        .map(m => m[1]).filter(n => !['if','for','while','switch','function','alert','confirm','prompt'].includes(n));
+      if (calls.length && calls.some(name => typeof window[name] !== 'function')) return false;
+      // A click handler that only redirects to the builder is never a configured app action.
+      if (platformDestination(inline)) return false;
+      return true;
+    }
+
+    if (el.disabled || el.getAttribute('aria-disabled') === 'true') return false;
+
+    const form = el.closest('form');
+    if (form && (tag === 'button' ? el.type === 'submit' : el.type === 'submit')) {
+      // A form is configured only if it has an actual submit handler or a real action URL.
+      const action = (form.getAttribute('action') || '').trim();
+      return (!!action && action !== '#' && !platformDestination(action)) ||
+        typeof form.onsubmit === 'function' || !!form.querySelector('[data-submit-configured="true"]');
+    }
+    return false;
+  }
+
+  function showConfigurationNotice() {
+    let notice = document.getElementById('nular-link-configuration-notice');
+    if (!notice) {
+      notice = document.createElement('div');
+      notice.id = 'nular-link-configuration-notice';
+      notice.setAttribute('role', 'status');
+      notice.style.cssText = 'position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:2147483647;max-width:calc(100% - 32px);padding:14px 18px;border-radius:12px;background:#18181b;color:#fff;border:1px solid #71717a;box-shadow:0 8px 30px #0005;font:14px/1.5 system-ui,sans-serif;text-align:center;';
+      document.body.appendChild(notice);
+    }
+    notice.textContent = 'O botão não está configurado. Configure no chat deste projeto.';
+    notice.style.display = 'block';
+    if (window.__nularLinkNoticeTimer) clearTimeout(window.__nularLinkNoticeTimer);
+    window.__nularLinkNoticeTimer = setTimeout(function () { notice.style.display = 'none'; }, 5000);
+  }
+
+  document.addEventListener('click', function (event) {
+    const node = event.target && event.target.nodeType === 1 ? event.target : event.target && event.target.parentElement;
+    if (!node || !node.closest) return;
+    const target = node.closest('a,button,input[type="button"],input[type="submit"],[role="button"],[onclick],[data-action],[data-href],[data-url],summary');
+    if (!target) return;
+    if (target.closest('#nular-link-configuration-notice')) return;
+    if (!meaningfulButton(target)) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+      showConfigurationNotice();
+    }
+  }, true);
+})();
+</script>
+</body>
+</html>
